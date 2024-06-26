@@ -1,0 +1,20 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="APIPokemonA.MainPage">
+    <StackLayout>
+        <CollectionView x:Name="PokemonListView" SelectionChanged="OnSelectionChanged">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Name}" />
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+
+        <StackLayout x:Name="PokemonDetail" IsVisible="False">
+            <Label x:Name="PokemonName" FontSize="24"/>
+            <Image x:Name="PokemonImage"/>
+            <Label Text="Habilidades:" FontSize="18"/>
+            <Label x:Name="PokemonAbilities"/>
+        </StackLayout>
+    </StackLayout>
+</ContentPage>
